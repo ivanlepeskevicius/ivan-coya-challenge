@@ -1,0 +1,9 @@
+WhenBrowsingSearchCategories:
+In order to perform a search
+As a user
+I want to be able to navigate to the particular category I want to search for.
+
+WhenSearchingForSale:
+In order to perform a search in the For Sale page
+As a user
+I want to be able to perform searches using the For Sale category.
