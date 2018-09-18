@@ -21,6 +21,7 @@ import static funda.test.ui.SearchElements.*;
 import static net.serenitybdd.screenplay.EventualConsequence.eventually;
 import static net.serenitybdd.screenplay.GivenWhenThen.*;
 import static net.serenitybdd.screenplay.matchers.ConsequenceMatchers.displays;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotPresent;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 import static org.hamcrest.CoreMatchers.*;
@@ -170,7 +171,8 @@ public class WhenSearchingForSale {
                 seeThat(results, displays("SearchField",equalTo(""))),
                 seeThat(results, displays("DistanceField",equalTo("0"))),
                 seeThat(results, displays("FromField",equalTo("0"))),
-                seeThat(results, displays("ToField",equalTo("ignore_filter")))
+                seeThat(results, displays("ToField",equalTo("ignore_filter"))),
+                seeThat(the(LAST_SEARCH), isNotPresent())
         );
     }
 }
